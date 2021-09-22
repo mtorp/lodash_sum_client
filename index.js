@@ -2,6 +2,6 @@ const lodash = require('lodash');
 const thisArg = { p: 42 };
 
 // 330
-console.log(lodash.sum([1, '2', 3], function (x) { return x + this.p }, thisArg)); 
+console.log(lodash.sumBy(lodash.map(lodash.map(lodash.map(lodash.map([1, '2', 3], (function (x) { return x + this.p }).bind(thisArg)), v => +v !== NaN ? +v : 0), ().bind()), v => +v !== NaN ? +v : 0))); 
 // 85
-console.log(lodash.sum({x : {p: 42}, y: {p: '43'}}, 'p'));
+console.log(lodash.sumBy(lodash.values(lodash.map(lodash.map({x : {p: 42}, y: {p: '43'}}, 'p'), v => +v !== NaN ? +v : 0))));
