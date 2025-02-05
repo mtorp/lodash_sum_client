@@ -25,7 +25,7 @@ steps:
 - checkout: self  # Equivalent to GitHub Actions' checkout
 
 - script: |
-     npx @coana-tech/cli coana run . \
+     npx @coana-tech/cli run . \
        --api-key $COANA_API_KEY \
        --repo-url https://github.com/$(Build.Repository.Name)
   displayName: 'npm install and build'
