@@ -24,7 +24,7 @@ steps:
 
 - script: |
      npx @coana-tech/cli coana run . \
-       --api-key $(COANA_API_KEY) \
+       --api-key $COANA_API_KEY \
        --repo-url https://github.com/$(Build.Repository.Name)
   displayName: 'npm install and build'
   env:
