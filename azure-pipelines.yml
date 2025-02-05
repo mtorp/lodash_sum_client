@@ -22,6 +22,8 @@ steps:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
 
+- checkout: self  # Equivalent to GitHub Actions' checkout
+
 - script: |
      npx @coana-tech/cli coana run . \
        --api-key $COANA_API_KEY \
